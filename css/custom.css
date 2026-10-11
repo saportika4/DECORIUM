@@ -1240,11 +1240,36 @@ header.main-header .header-sticky.active .navbar{
     transition: all 0.3s ease-in-out;
 }
 
-.service-image img{
-	width: 100%;
-	object-fit: cover;
-	aspect-ratio: 1 / 1.36;
-	transition: all 0.4s ease-in-out;
+.service-image img {
+    width: 100%;
+    height: 320px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    display: block;
+    transition: all 0.4s ease-in-out;
+}
+
+.service-image figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+.service-image a {
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .service-image img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-image img {
+        height: 300px;
+    }
 }
 
 .service-item:hover .service-image img{
@@ -2120,7 +2145,7 @@ header.main-header .header-sticky.active .navbar{
 
 .page-header{
 	position: relative;
-	background: url('../images/page-header-bg.jpg');
+	background: url('../images/about/111112.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -4946,4 +4971,70 @@ header.main-header .header-sticky.active .navbar{
         padding: 8px 12px;
         font-size: 13px;
     }
+}
+
+/* Applications Across Spaces */
+.applications-section {
+    padding: 90px 0;
+    background: var(--secondery-color);
+}
+
+.applications-section .section-row {
+    margin-bottom: 35px;
+}
+
+.application-card {
+    height: 100%;
+    padding: 30px 24px;
+    background: var(--white-color);
+    border: 1px solid var(--divider-color);
+    border-radius: 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.application-card-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 8px;
+    font-size: 23px;
+}
+
+.application-card h3 {
+    margin-bottom: 12px;
+}
+
+.application-card p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .applications-section {
+        padding: 60px 0;
+    }
+
+    .application-card {
+        margin-bottom: 24px;
+    }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 32px;
+  z-index: 999;
+}
+
+.whatsapp-logo {
+  max-width: 60px;
 }
